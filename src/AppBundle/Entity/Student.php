@@ -32,6 +32,11 @@ use Doctrine\ORM\Mapping as ORM;
  */
  private $numEtud;
 
+ /**
+  * @ORM\OneToMany(targetEntity="Department", mappedBy="name")
+  */
+ private $departments;
+
     /**
      * Get the value of Id
      *
@@ -41,7 +46,7 @@ use Doctrine\ORM\Mapping as ORM;
     {
         return $this->id;
     }
- 
+
 
     /**
      * Get the value of First Name

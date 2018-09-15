@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
 * @ORM\Entity
@@ -29,6 +30,7 @@ class Department
      private $Capacity;
 
 
+
     /**
      * Get the value of Id
      *
@@ -38,7 +40,7 @@ class Department
     {
         return $this->id;
     }
- 
+
     /**
      * Get the value of Name
      *
