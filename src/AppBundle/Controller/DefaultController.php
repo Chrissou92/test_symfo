@@ -16,13 +16,21 @@ class DefaultController extends Controller
     {
 
         // create form
-        $form = $this->createFormBuilder()
-        ->add('firstName', TextType::class)
-        ->add('lastName', TextType::class)
-        ->add('numEtud', TextType::class)
-        ->getForm();
+        // $form = $this->createFormBuilder()
+        // ->add('firstName', TextType::class)
+        // ->add('lastName', TextType::class)
+        // ->add('numEtud', TextType::class)
+        // ->getForm();
         // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', array('form' => $form->createView(),
-    ));
+       //  return $this->render('default/index.html.twig'
+       // array('form' => $form->createView(),)
+// );
+$em = $this->getDoctrine()->getManager();
+
+$students = $em->getRepository('AppBundle:Student')->findAll();
+
+return $this->render('student/index.html.twig', array(
+    'students' => $students,
+));
     }
 }
