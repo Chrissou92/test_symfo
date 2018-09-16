@@ -23,10 +23,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a class="btn btn-primary" href="{{ path('student_show', { 'id': student.id }) }}">show</a>
+                            <a class="btn btn-primary" href="{{ path('student_show', { 'id': student.id }) }}">Show</a>
                         </li>
                         <li>
-                            <a class="btn btn-primary" href="{{ path('student_edit', { 'id': student.id }) }}">edit</a>
+                            <a class="btn btn-primary" href="{{ path('student_edit', { 'id': student.id }) }}">Edit</a>
                         </li>
                     </ul>
                 </td>
@@ -37,7 +37,24 @@
 
     <ul>
         <li>
-            <a class="btn btn-primary"href="{{ path('student_new') }}">Create a new student</a>
+            <a class="btn btn-primary btn-add"href="{{ path('student_new') }}">Create a new student</a>
         </li>
     </ul>
+{% endblock %}
+
+
+{% block stylesheets %}
+<style>
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .btn {
+        width: 5em;
+    }
+    .btn-add {
+        width: 12em;
+    }
+    }
+</style>
 {% endblock %}
